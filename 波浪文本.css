@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;                      /*高度为窗口高度*/
+    background-color: black;
+    
+}
+
+.wrap{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent,rgba(0,0,0,0.2));
+}
+
+.wrap span{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    animation: KK 1s linear infinite;
+    animation-delay: calc(.1s*var(--i));
+}
+@keyframes KK{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
